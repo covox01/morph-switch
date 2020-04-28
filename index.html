@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Morph Switch</title>
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script> -->
+   <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_2.1.2_min.js"></script>	
+   <script src="plugins/MorphSVGPlugin.min.js"></script>
+   
+   <link rel="stylesheet" href="css/style.css">
+</head>
+   <body>
+      <div class="container">
+         <svg id="svg-circle" xmlns="http://www.w3.org/2000/svg" width="266.2" height="266.2">
+            <circle id="circle" cx="133.1" cy="133.1" r="133.1" fill="#282828"/>
+            <!-- <path id="square" fill="#282828" d="M0 266h266V0H0"/> -->
+         </svg>
+         <svg id="svg-square" xmlns="http://www.w3.org/2000/svg" width="266" height="266">
+            <path id="square" fill="#282828" d="M0 266h266V0H0"/>
+         </svg>
+         <svg id="svg-switch" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+            <circle id="switch"cx="18" cy="18" r="18" fill="#282828"/>
+         </svg>
+      </div>
+
+
+   <!-- This script allows all the DOM content to be loaded first before firing any code in the main.js -->
+      <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(event) {
+            // wait until window is loaded - meaning all images, stylesheets, js, fonts, media assets, and links
+            window.addEventListener("load", function(e) {
+               init()
+            }, false);
+         })
+      </script>
+      <script src="js/main.js"></script>
+   </body>
+</html>
