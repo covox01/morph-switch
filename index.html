@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Morph Switch</title>
+		<script src="plugins/TweenMax.min.js"></script>
+		<script src="plugins/MorphSVGPlugin.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/Draggable.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div id="border"></div>
+		<div id="container">
+			<svg
+				id="svg-circle"
+				xmlns="http://www.w3.org/2000/svg"
+				width="100%"
+            height="100%"
+            viewBox="-120 -100 500 500"> 
+			>
+				<g id="circle-container">
+					<path
+						id="circle"
+						d="M0 133.1c0 73.5 59.6 133.1 133.1 133.1 44.8 0 133.1 0 133.1-133.1C266.2 59.6 206.6 0 133.1 0 20.7 0 0 100.4 0 133.1z"
+						fill="#282828"
+					/>
+					<g id="eyes">
+						<circle cx="103.1" cy="97.1" r="15.7" fill="#fff" />
+						<circle cx="198.1" cy="93.1" r="15.7" fill="#fff" />
+					</g>
+					<path
+						id="circle-face"
+						fill="none"
+						stroke="#fff"
+						stroke-width="3"
+						stroke-linecap="round"
+						stroke-miterlimit="10"
+						d="M152.3 89.1l27 88-48-3M96.3 206l72.8 4"
+					/>
+				</g>
+			</svg>
+			<svg
+				id="svg-square"
+				xmlns="http://www.w3.org/2000/svg"
+				width="266.2"
+				height="266.2"
+			>
+				<path
+					id="square"
+					d="M0 133.1c0 73.5 59.6 133.1 133.1 133.1h133.1V133.1C266.2 59.6 206.6 0 133.1 0H0v133.1z"
+					fill="#282828"
+				/>
+				<ellipse cx="75.6" cy="93.1" rx="16" ry="17" fill="#fff" />
+				<ellipse cx="169.6" cy="93.1" rx="16" ry="17" fill="#fff" />
+				<path
+					id="square-face"
+					d="M113.5 167.1c0 2.5-25.5 24-42.5 1-18.4-24.9 15.4-32.4 35.5-47 12.7-7.7 12.7-23.7 8.7-29M82.4 211s56.1 26.3 91.7-21"
+					fill="none"
+					stroke="#fff"
+					stroke-width="3"
+					stroke-linecap="round"
+					stroke-miterlimit="10"
+				/>
+			</svg>
+			<svg
+				id="svg-switch"
+				xmlns="http://www.w3.org/2000/svg"
+				width="36"
+				height="36"
+			>
+				<circle id="switch" cx="18" cy="18" r="18" fill="#282828" />
+			</svg>
+		</div>
+
+		<!-- This script allows all the DOM content to be loaded first before firing any code in the main.js -->
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded", function (event) {
+				// wait until window is loaded - meaning all images, stylesheets, js, fonts, media assets, and links
+				window.addEventListener(
+					"load",
+					function (e) {
+						init();
+					},
+					false
+				);
+			});
+		</script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
